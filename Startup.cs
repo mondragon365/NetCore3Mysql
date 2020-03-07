@@ -25,6 +25,7 @@ namespace Core3Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var asddd=Configuration["ConnectionStrings:DefaultConnection"];
             services.AddTransient<AppDb>(_ => new AppDb(Configuration["ConnectionStrings:DefaultConnection"]));
             services.AddControllers();
         }
